@@ -8,6 +8,8 @@ import com.pcw.user.model.User;
 @Repository
 public interface UserDAO {
 
+	public int selectUserByUserId (String userId);
+	
 	public User selectUserByUserIdAndPassword (
 			@Param("userId") String userId, 
 			@Param("userPw") String userPw);

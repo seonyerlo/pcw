@@ -24,6 +24,25 @@ public class UserRestController {
 	@Autowired
 	private UserBO userBO;
 	
+	@RequestMapping("/is_duplicated_id")
+	public Map<String, Object> isDuplicatedId(
+			@RequestParam("userId") String userId
+		) {
+		Map<String, Object> result = new HashMap<>();
+		
+		// db
+		int count = userBO.getUserByUserId(userId);
+		if  (count > 0) {
+			// id가 중복, 존재
+			result.put("result", true);
+		} else {
+			// id 사용 가능
+			result.put("result", false);
+		}
+		
+		return result;
+	}
+	
 	/**
 	 * 로그인
 	 * @param userId

@@ -3,6 +3,9 @@
 <div class="pcw-sign-up-info">
 	<label for="userId">아이디</label>
 	<input id="userId" type="text" class="userId form-control" placeholder="영문 4자 이상, 최대 20자">
+	<div class="pcw-id-check">
+    	<span class="pcw-id-check-text d-none"></span>
+	</div>
 	<label for="userPw">비밀번호</label>
 	<input id="userPw" type="password" class="userPw form-control" placeholder="숫자, 영문, 특수문자 포함 최소 8자 이상">
 	<label for="userPwConfirm">비밀번호 확인</label>
@@ -21,6 +24,42 @@
 <script>
 $(document).ready(function() {
 	
+	$('#userId').on('focusout', function(e) {
+		const regId = /^[a-zA-Z0-9]{4,20}$/;
+		let userId = $('#userId').val().trim();
+		if (userId.length < 4) {
+			$('.pcw-id-check-text').removeClass('d-none');
+			$('.pcw-id-check-text').text("최소 4자 , 최대 20 자 입니다.");;
+			$('#userId').focus();
+			return;
+		}
+		if (!userId.match(regId)) {
+			$('.pcw-id-check-text').removeClass('d-none');
+			$('.pcw-id-check-text').text("허용되지 않는 문자열이 포함되어 있습니다.");
+			$('#userId').focus();
+			return;
+		}
+		
+		$.ajax({
+			url: "/user/is_duplicated_id"
+			, data: {"userId":userId}
+			
+			, success: function(data) {
+				if (data.result) {
+					$('.pcw-id-check-text').removeClass('d-none');
+					$('.pcw-id-check-text').text("사용중이거나 탈퇴한 아이디입니다.");
+					$('#userId').focus();
+				} else {
+					$('.pcw-id-check-text').removeClass('d-none');
+					$('.pcw-id-check-text').text("사용 가능한 아이디입니다.");
+					
+				}
+			}
+			, error: function(error) {
+				alert("아이디 중복 확인에 실패하였습니다. 관리자에게 문의해주세요.");
+			}
+		});
+	});
 
 	$('#pcw-sign-up-btn').on('click', function(e) {
 		e.preventDefault();

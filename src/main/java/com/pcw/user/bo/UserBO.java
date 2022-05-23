@@ -14,6 +14,15 @@ public class UserBO {
 	private UserDAO userDAO;
 	
 	/**
+	 * 로그인 중복 확인
+	 * @param userId
+	 * @return
+	 */
+	public int getUserByUserId(String userId) {
+		return userDAO.selectUserByUserId(userId);
+	}
+	
+	/**
 	 * 로그인
 	 * @param userId
 	 * @param userPw

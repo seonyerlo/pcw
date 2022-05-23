@@ -2,6 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.pcw.user.dao.UserDAO">
+	<select id="selectUserByUserId" parameterType="string" resultType="int">
+		SELECT
+			COUNT(1)
+		FROM
+			`user`
+		WHERE
+			`userId` = #{userId}
+	</select>
+
 	<select id="selectUserByUserIdAndPassword" resultType="com.pcw.user.model.User">
 		SELECT
 			`id`
