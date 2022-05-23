@@ -9,6 +9,6 @@ import com.pcw.user.model.User;
 public interface UserDAO {
 
 	public User selectUserByUserIdAndPassword (
-			@Param("userId") String userId, 
+			@Param("userIdOrEmail") String userIdOrEmail, 
 			@Param("userPw") String userPw);
 }

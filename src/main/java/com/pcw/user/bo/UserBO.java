@@ -18,8 +18,8 @@ public class UserBO {
 	 * @param userPw
 	 * @return
 	 */
-	public User getUserByUserIdAndPassword(String userId, String userPw) {
-		return userDAO.selectUserByUserIdAndPassword(userId, userPw);
+	public User getUserByUserIdAndPassword(String userIdOrEmail, String userPw) {
+		return userDAO.selectUserByUserIdAndPassword(userIdOrEmail, userPw);
 	}
 	
 }

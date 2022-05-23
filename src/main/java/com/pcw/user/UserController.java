@@ -16,8 +16,8 @@ public class UserController {
 	// 요청 URL : http://localhost/user/sign_up
 	@RequestMapping("/sign_up")
 	public String SignUpView(Model model) {
-		model.addAttribute("viewContent", "/user/sign_up");
-		
+		model.addAttribute("content", "/user/sign_up");
+		model.addAttribute("footer", "/include/sign_footer");
 		return "template/sign_layout";
 	}
 
@@ -28,8 +28,8 @@ public class UserController {
 	// 요청 URL : http://localhost/user/sign_in
 	@RequestMapping("/sign_in")
 	public String SignInView(Model model) {
-		model.addAttribute("viewContent", "/user/sign_in");
-		
+		model.addAttribute("content", "/user/sign_in");
+		model.addAttribute("footer", "/include/sign_footer");
 		return "template/sign_layout";
 	}
 }

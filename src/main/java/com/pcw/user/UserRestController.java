@@ -31,13 +31,13 @@ public class UserRestController {
 	 */
 	@PostMapping("/login")
 	public Map<String, Object> login(
-			@RequestParam("userId") String userId, 
+			@RequestParam("userIdOrEmail") String userIdOrEmail, 
 			@RequestParam("userPw") String userPw,
 			HttpSession session) {
 		
 		Map<String, Object> result = new HashMap<>();
 		
-		User user = userBO.getUserByUserIdAndPassword(userId, userPw);
+		User user = userBO.getUserByUserIdAndPassword(userIdOrEmail, userPw);
 		
 		if (user != null) {
 			result.put("result", "success");
