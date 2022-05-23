@@ -17,6 +17,9 @@
 			`user`
 		WHERE
 			`userId` = #{userId}
-			AND `userPw` = #{userPw}	
+			AND `userPw` = #{userPw}
+		OR
+			`userEmail` = #{userEmail}
+			AND `userPw` = #{userPw}
 	</select>
 </mapper>
