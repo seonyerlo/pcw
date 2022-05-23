@@ -25,10 +25,10 @@
 		FROM
 			`user`
 		WHERE
-			`userId` = #{userId}
+			`userId` = #{userIdOrEmail}
 			AND `userPw` = #{userPw}
 		OR
-			`userEmail` = #{userEmail}
+			`userEmail` = #{userIdOrEmail}
 			AND `userPw` = #{userPw}
 	</select>
 	
