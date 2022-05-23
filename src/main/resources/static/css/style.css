@@ -1,0 +1,453 @@
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RixYeoljeongdo_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style:none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+/* main page*/
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'RixYeoljeongdo_Regular';
+    padding: 30px 120px 0px;
+}
+
+.pcw-logo-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.pcw-logo-box > .logo-1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.pcw-logo-box > .logo-2 {
+    font-size: 13px;
+}
+
+.pcw-search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    height: 45px;
+    border: 1px solid #764AF1;
+    border-radius: 5px;
+}
+
+.pcw-search-box > input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 0px 10px;
+}
+
+.pcw-search-box .pcw-search-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+}
+
+.pcw-search-box .pcw-search-btn > i {
+    font-size: 25px;
+    margin-right: 10px;
+    color: #764AF1;
+}
+
+.pcw-sub-box {
+    display: flex;
+}
+
+.pcw-sub-box > button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: none;
+    margin: 0px 10px;
+}
+
+.pcw-sub-box > button > i {
+    font-size: 35px;
+    color: lightgray;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    padding: 0px 120px 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+nav > div > button {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+}
+
+nav > div > button > i {
+    font-size: 30px;
+}
+
+nav > div > button > span {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pcw-menu-box > ul {
+    display: flex;
+}
+
+.pcw-menu-box > ul > li {
+    padding: 0px 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pcw-menu-box > ul > li > a {
+    color: #333333;
+}
+
+.pcw-contents {
+    padding: 0px 120px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+}
+
+
+.pcw-content-layout {
+    display: flex;
+}
+
+.pcw-category-box {
+    width: 200px;
+    background: #764AF1;
+    padding: 20px 10px;
+}
+
+.pcw-category > li {
+    margin-bottom: 10px;
+}
+
+.pcw-category > li > a {
+    font-weight: bold;
+    color: white;
+}
+
+.pcw-shopping-info-box {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 0px 25px;
+}
+
+.pcw-shopping-info-category-box {
+    display: flex;
+    align-items: center;
+}
+
+.pcw-shopping-info-category-box > span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pcw-shopping-info-category-box > ul {
+    display: flex;
+    
+}
+
+.pcw-shopping-info-category-box > ul > li {
+    margin-left: 20px;
+}
+
+.pcw-shopping-info-category-box > ul > li > a {
+    color: black;
+    font-size: 15px;
+}
+
+.pcw-shopping-item-box {
+    margin-top: 10px;
+    width: 802px;
+    height: 196px;
+}
+
+.pcw-shopping-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pcw-shopping-item > li {
+    display: flex;
+    align-items: center;
+    height: 88px;
+    margin-top: 10px;
+}
+
+.pcw-shopping-item > li > div > a {
+    display: flex;
+    align-items: center;
+    height: 88px;
+}
+
+.pcw-shopping-item-text-link-box {
+    width: 120px;
+    height: 60px;
+    margin: 0px 10px ;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;  
+}
+
+.pcw-shopping-item-text-link-box > a {
+    font-size: 12.5px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.pcw-shopping-item-more-select {
+    margin-top: 10px;
+}
+
+.pcw-best-seller-title-box {
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pcw-main-sub-menu-box {
+    width: 80px;
+    margin: 0;
+}
+
+.pcw-main-sub-menu-box > .pcw-main-sub-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    
+}
+
+.pcw-main-sub-menu-box > .pcw-main-sub-menu > li {
+    width: 80px;
+    border: 1px solid lightgrey;
+    margin-bottom: -1px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.pcw-main-sub-menu > li > a {
+    color: black;
+    font-size: 13px;
+    padding: 10px;
+
+}
+
+.pcw-best-seller-box {
+    border-top: 2px solid black;
+    margin-left: 40px;
+    width: 1150px;
+    height: 506px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.product-list > li {
+    display: flex;
+    justify-content: center;
+    width: 190px;
+}
+
+.product-list > li > a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+} 
+
+.product-list > li >  a > .product-name {
+    font-size: 14px;
+    color: #666;
+}
+
+.product-list > li > a > .product-price {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.product-list > li > a > div {
+    display: flex;
+    justify-content: center;
+}
+
+.product-list > li > a > img {
+    width: 130px;
+}
+
+.product-list > li > a > span {
+    text-align: center;
+} 
+
+.pcw-best-shoppingmall-box {
+    padding: 0px  120px;
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pcw-best-shoppingmall-title {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.pcw-best-shoppingmall-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pcw-best-shoppingmall-list > li {
+    width: 97px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+}
+
+footer > span {
+    font-size: 12px;
+    padding: 10px 0px;
+}
+
+/* sign up page */
+.login-header {
+    width: 600px;
+    margin: 0 auto;
+    font-family: 'RixYeoljeongdo_Regular';
+    padding: 30px 0px 10px 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.pcw-logo-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.pcw-logo-box > .logo-1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.pcw-logo-box > .logo-2 {
+    font-size: 13px;
+}
+
+.pcw-sign-up-info {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.pcw-sign-up-info > label {
+    margin: 15px 0px 5px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pcw-sign-up-btn {
+    width: 600px;
+    margin: 15px 0px 5px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* sign in page */
+.pcw-sign-in-info {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.pcw-sign-in-user {
+    display: flex;
+    margin: 15px 0px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.pcw-sign-in-user > label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pcw-sign-in-user > input {
+    width: 500px;
+}
+
+.pcw-sign-in-btn {
+    width: 600px;
+    margin: 0px 0px 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pcw-find-user {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.pcw-find-user > div > a {
+    margin: 0px 10px;
+}
