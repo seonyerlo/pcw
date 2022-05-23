@@ -22,4 +22,29 @@
 			`userEmail` = #{userEmail}
 			AND `userPw` = #{userPw}
 	</select>
+	
+	<insert id="insertUser" parameterType="map">
+		INSERT INTO `user`
+		(
+			`userId`
+			, `userPw`
+			, `userName`
+			, `userEmail`
+			, `userPhoneNumber`
+			, `userAddress`
+			, `createdAt`
+			, `updatedAt`
+		)
+		VALUES
+		(
+			#{userId}
+			, #{userPw}
+			, #{userName}
+			, #{userEmail}
+			, #{userPhoneNumber}
+			, #{userAddress}
+			, NOW()
+			, NOW()
+		)
+	</insert>
 </mapper>

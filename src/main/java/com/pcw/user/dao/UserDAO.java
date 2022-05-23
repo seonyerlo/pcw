@@ -11,4 +11,12 @@ public interface UserDAO {
 	public User selectUserByUserIdAndPassword (
 			@Param("userId") String userId, 
 			@Param("userPw") String userPw);
+	
+	public int insertUser (
+			@Param("userId") String userId,
+			@Param("userPw") String userPw,
+			@Param("userName") String userName,
+			@Param("userEmail") String userEmail,
+			@Param("userPhoneNumber") String userPhoneNumber,
+			@Param("userAddress") String userAddress);
 }
